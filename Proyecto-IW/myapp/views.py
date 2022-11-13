@@ -9,5 +9,15 @@ def index(request):
 
 def lista_artistas(request):
     artistas = Artistas.objects.order_by('nombre')
-    context = {'artistas': artistas}
+    context = {'lista_artistas': artistas}
     return render(request, 'lista_artistas.html', context)
+
+def lista_grupos(request):
+    grupos = Grupos.objects.order_by('nomGrupo')
+    context = {'lista_grupos': grupos}
+    return render(request, 'lista_grupos.html', context)
+
+def lista_discos(request):
+    disco = Disco.objects.order_by('nomDisco')
+    context = {'lista_discos': disco}
+    return render(request, 'lista_discos.html', context)
