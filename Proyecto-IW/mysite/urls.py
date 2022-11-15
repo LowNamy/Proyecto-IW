@@ -30,6 +30,5 @@ urlpatterns = [
     path('grupo/<int:grupo_id>', views.grupo, name='grupo'),
 
     path('admin/', admin.site.urls),
-    path('myapp/', include('myapp.urls')),
     path('', views.index, name='index')
 ]
