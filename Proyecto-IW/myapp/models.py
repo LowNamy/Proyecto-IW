@@ -15,19 +15,19 @@ class Disco(models.Model):
 
 class Artistas(models.Model):
     nombre = models.CharField(max_length=50)
-    lugarNac = models.CharField(max_length=50)
+    lugar = models.CharField(max_length=50)
     imagenArtista = models.ImageField()
     discos = models.ManyToManyField(Disco)
     genero = models.ManyToManyField(Genero)
     def __str__(self):
         return self.nombre
 
-class Grupos(models.Model):
-    nomGrupo = models.CharField(max_length=50)
-    integrantes = models.CharField(max_length=100)
-    lugarNac = models.CharField(max_length=50)
-    imagenGrupo = models.ImageField()
-    discos = models.ManyToManyField(Disco)
-    genero = models.ManyToManyField(Genero)
-    def __str__(self):
-        return self.nomGrupo
+# class Grupos(models.Model):
+#     nomGrupo = models.CharField(max_length=50)
+#     integrantes = models.CharField(max_length=100)
+#     lugarNac = models.CharField(max_length=50)
+#     imagenGrupo = models.ImageField()
+#     discos = models.ManyToManyField(Disco)
+#     genero = models.ManyToManyField(Genero)
+#     def __str__(self):
+#         return self.nomGrupo
