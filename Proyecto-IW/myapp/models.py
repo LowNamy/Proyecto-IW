@@ -8,8 +8,7 @@ class Genero(models.Model):
 
 class Disco(models.Model):
     nomDisco = models.CharField(max_length = 50)
-    fecha = models.CharField(max_length = 50)
-    imDisco = models.ImageField()
+    lanzamiento = models.CharField(max_length = 50)
     def __str__(self):
         return self.nomDisco
 
@@ -17,8 +16,8 @@ class Artistas(models.Model):
     nombre = models.CharField(max_length=50)
     lugar = models.CharField(max_length=50)
     imagenArtista = models.ImageField()
-    discos = models.ManyToManyField(Disco)
-    genero = models.ManyToManyField(Genero)
+    disco = models.ForeignKey(Disco, on_delete=models.CASCADE, null=True, blank=True)
+    genero = models.ForeignKey(Genero, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.nombre
 
