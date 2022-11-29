@@ -35,7 +35,5 @@ def artistasD(request, disco_id):
 #devuelve los detalles de un artista y grupo
 def artista(request, artista_id):
     artista = get_object_or_404(Artistas, pk=artista_id)
-    genero =  artista.genero.all()
-    discos =  artista.discos.all()
-    context = { 'artista': artista, 'genero' : genero, 'discos' : discos }
+    context = { 'artista': artista }
     return render(request, 'artistas.html', context)
