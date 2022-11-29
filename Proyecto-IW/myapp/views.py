@@ -32,8 +32,11 @@ def artistasD(request, disco_id):
 	context = { 'artistas' : artistas, 'discos': discos }
 	return render(request, 'artistas.html', context)
 
-#devuelve los detalles de un artista y grupo
+#devuelve los detalles de un artista
 def artista(request, artista_id):
     artista = get_object_or_404(Artistas, pk=artista_id)
     context = { 'artista': artista }
     return render(request, 'artistas.html', context)
+
+def formulario(request):
+    return render(request, 'formulario.html')

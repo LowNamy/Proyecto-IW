@@ -1,12 +1,16 @@
 {% extends "base.html" %}
+
 {% block title %} Artistas {% endblock %}
+
 {% block content %} 
-{% if lista_artistas %}
-    <h1>Lista de artista</h1>
-{% for e in lista_artistas %}
-    <a href="{% url 'artista' e.id %}">{{e.nombre}}</a>
-{% endfor %}
+{% if artista %}
+    <h1>ARTISTA</h1>
+    <h2>{{artista.nombre}}</h2>
+    <h2>{{artista.lugar}}</h2>
+    <h2>{{artista.imagenArtista}}</h2>
+    <h2>{{artista.disco}}</h2>
+    <h2>{{artista.genero}}</h2>
 {% else %}
-<p>No hay artistas creados.</p>
+    <p>No se ha podido mostrar la información</p>
 {% endif %}
 {% endblock %}

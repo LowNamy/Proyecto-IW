@@ -10,6 +10,8 @@ urlpatterns = [
     path('discos/<int:disco_id>/artistas', views.artistasD, name='artistas'),
     path('artista/<int:artista_id>', views.artista, name='artista'),
 
+    path('formulario', views.formulario),
+
     path('admin/', admin.site.urls),
     path('', views.index, name='index')
 ]
