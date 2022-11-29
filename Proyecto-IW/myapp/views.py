@@ -19,19 +19,6 @@ def lista_discos(request):
     context = {'lista_discos': disco}
     return render(request, 'lista_discos.html', context)
 
-#devuelve los artistas de un genero o discos
-def artistasG(request, genero_id):
-	genero = get_object_or_404(Genero, pk=genero_id)
-	artistas =  genero.artistas_set.all()
-	context = {'genero': genero, 'artistas' : artistas }
-	return render(request, 'artistas.html', context)
-
-def artistasD(request, disco_id):
-	discos = get_object_or_404(Disco, pk=disco_id)
-	artistas =  discos.artistas_set.all()
-	context = { 'artistas' : artistas, 'discos': discos }
-	return render(request, 'artistas.html', context)
-
 #devuelve los detalles de un artista
 def artista(request, artista_id):
     artista = get_object_or_404(Artistas, pk=artista_id)
