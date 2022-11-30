@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Artistas {% endblock %}
+
+{% block content %} 
+{% if disco %}
+    <h1>DISCO</h1>
+    <h2>{{disco.nomDisco}}</h2>
+    <h2>{{disco.lanzamiento}}</h2>
+
+     <!--Hacer un boton con el enlace al artista correspondiente-->
+     
+{% else %}
+    <p>No se ha podido mostrar la información</p>
+{% endif %}
+{% endblock %}
