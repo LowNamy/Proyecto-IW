@@ -15,7 +15,7 @@ class Disco(models.Model):
 class Artistas(models.Model):
     nombre = models.CharField(max_length=50)
     lugar = models.CharField(max_length=50)
-    imagenArtista = models.ImageField()
+    imagenArtista = models.ImageField(upload_to="media/", null=True, blank = True)
     disco = models.ForeignKey(Disco, on_delete=models.CASCADE, null=True, blank=True)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
