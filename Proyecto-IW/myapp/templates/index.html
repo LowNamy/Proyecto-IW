@@ -1,17 +1,12 @@
 {% extends "base.html" %}
 {% block title %} Pagina principal {% endblock %}
 {% block content %} 
-<h1>Lista de generos</h1> 
 {% if lista_generos %}
+    <h1>Lista de Generos</h1>
     {% for e in lista_generos %}
-    {% for a in lista_artistas %}
-    {% if a.genero == e %}
-    
-    {% else %}
-    {% endfor %}
-    <a href="{% url 'lista_generos' %}">{{e.nomGenero}}</a>
+        <a href="lista_artista/{{e.nomGenero}}">{{e.nomGenero}}</a>
     {% endfor %}
 {% else %}
-<p>No hay generos creados.</p>
+    <p>No hay artistas creados.</p>
 {% endif %}
 {% endblock %}

@@ -8,6 +8,7 @@ urlpatterns = [
     path('lista_artistas', views.lista_artistas, name='lista_artistas'),
     path('lista_discos', views.lista_discos, name='lista_discos'),
     path('artista/<int:artista_id>', views.artista, name='artista'),
+    path('lista_artista/<str:nom>', views.artistaG, name='genero'),
     path('disco/<int:disco_id>', views.disco, name='disco'),
 
     path('formulario', views.formulario),
