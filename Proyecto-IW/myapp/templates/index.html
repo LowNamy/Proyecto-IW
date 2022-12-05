@@ -2,4 +2,16 @@
 {% block title %} Pagina principal {% endblock %}
 {% block content %} 
 <h1>Lista de generos</h1> 
+{% if lista_generos %}
+    {% for e in lista_generos %}
+    {% for a in lista_artistas %}
+    {% if a.genero == e %}
+    
+    {% else %}
+    {% endfor %}
+    <a href="{% url 'lista_generos' %}">{{e.nomGenero}}</a>
+    {% endfor %}
+{% else %}
+<p>No hay generos creados.</p>
+{% endif %}
 {% endblock %}
