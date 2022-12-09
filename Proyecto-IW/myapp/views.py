@@ -27,8 +27,10 @@ def artista(request, artista_id):
 
 def artistaG(request, nom):
     artistaG =  get_object_or_404(Genero, nomGenero =nom)
-    context = { 'artistaG': artistaG }
-    return render(request, 'artistas.html', context)
+    artistas = Artistas.objects.filter(genero = artistaG)
+    print(len(artistas))
+    context = { 'artista': artistas }
+    return render(request, 'artistas2.html', context)
 
 def disco(request, disco_id):
     disco = get_object_or_404(Disco, pk=disco_id)

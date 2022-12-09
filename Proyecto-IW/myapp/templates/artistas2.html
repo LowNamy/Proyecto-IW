@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Artistas {% endblock %}
+
+{% block content %} 
+{% if artista %}
+{% for art in artista %}
+    <h1>ARTISTA</h1>
+    <h2>{{art.nombre}}</h2>
+    <p>{{art.lugar}}</p>
+    <img src={{artista.imagenArtista}}><img/>
+    <p>{{art.disco}}</p>
+    <p>{{art.genero}}</p>
+    {% endfor %}
+{% else %}
+    <p>No se ha podido mostrar la información</p>
+{% endif %}
+{% endblock %}
