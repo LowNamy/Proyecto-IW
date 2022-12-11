@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block title %} Pagina principal {% endblock %}
 {% block content %} 
+<script>
+    alert("Bienvenidos")
+</script>
 {% if lista_generos %}
     <h1>Lista de Generos</h1>
     {% for e in lista_generos %}
