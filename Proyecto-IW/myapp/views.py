@@ -32,10 +32,18 @@ def artistaG(request, nom):
     context = { 'artista': artistas }
     return render(request, 'artistas2.html', context)
 
+#
+#def artistaD(request, nom):
+#    artistaD =  get_object_or_404(Disco, nomDisco =nom)
+#    artistas = Artistas.objects.filter(disco = artistaD)
+#    print(len(artistas))
+#    context = { 'artista': artistas }
+#    return render(request, 'artistas2.html', context)
+
 def disco(request, disco_id):
     disco = get_object_or_404(Disco, pk=disco_id)
     a = { 'disco' : disco }
-    return render(request, 'index.html', a)
+    return render(request, 'disco.html', a)
 
 def formulario(request):
     return render(request, 'formulario.html')

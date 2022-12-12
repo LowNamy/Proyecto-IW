@@ -3,15 +3,26 @@
 {% block title %} Artistas {% endblock %}
 
 {% block content %} 
+
 {% if disco %}
-    {% for d in disco %}
-        <h1>ARTISTA</h1>
-        <h2>{{d.nombre}}</h2>
-        <p>{{d.lugar}}</p>
+
+    <h1>DISCO SELECCIONADO</h1>
+    <h2>{{disco.nomDisco}}</h2>
+    <p>{{disco.lanzamiento}}</p>
+   
+
+    {% if lista_discos %}
+        <h1>AAAAAAAAAAAAA</h1>
+        {% for e in lista_discos %}
+            <button href="lista_artista/{{e.nomDisco}}">{{e.nomDisco}}</button>
         {% endfor %}
+    {% else %}
+        <p>No hay artistas creados.</p>
+    {% endif %}
+
+
 {% else %}
     <p>No se ha podido mostrar la información</p>
 {% endif %}
-    <p>No se ha podido mostrar laAAA información</p>
-{% endif %}
+
 {% endblock %}
