@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-#footer .panel1 div{width:33%;float:left;border:none #ccc solid;}
+#footer .panel1 div{width:33%;float:left;border:none rgb(255, 255, 255) solid;}
 #footer .panel2{width:80%;margin:center;}
 
 #footer a

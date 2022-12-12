@@ -10,11 +10,14 @@
     <h2>{{disco.nomDisco}}</h2>
     <p>{{disco.lanzamiento}}</p>
    
-
-    {% if lista_discos %}
+    {% if lista_artistas %}
         <h1>AAAAAAAAAAAAA</h1>
-        {% for e in lista_discos %}
-            <button href="lista_artista/{{e.nomDisco}}">{{e.nomDisco}}</button>
+        {% for a in lista_artistas %}
+           {% if a.disco == disco.nomDisco %}
+            <p>{{a.nombre}}</p>
+           {% else %}
+            <p>no hay artistas en este disco</p>
+           {% endif %}
         {% endfor %}
     {% else %}
         <p>No hay artistas creados.</p>
