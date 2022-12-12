@@ -18,6 +18,9 @@ p
 img
 { border: 0;}
 
+small
+{ text-align: center;}
+
 h1, h2, h3, h4, h5, h6 
 { font: normal 175% 'century gothic', arial, sans-serif;
   color: #43423F;
@@ -173,7 +176,12 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   padding: 0 0 4px 25px;
   line-height: 1.5em;}
 
-
+#columnas{
+    column-count:4;
+    column-gap:20px;
+    column-rule:4px double black;
+    list-style: none;
+ }
 
 .search
 { color: #5D5D5D; 
@@ -251,3 +259,13 @@ table tr td
 { background: #F0EFE2;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+  /*IMAGENES*/
+.zoom{
+  transition: transform .3s;
+  margin-left: 100px;
+}
+
+.zoom:hover{
+  transform: scale(1.5);
+}

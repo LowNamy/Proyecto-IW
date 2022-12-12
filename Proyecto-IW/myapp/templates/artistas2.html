@@ -8,7 +8,7 @@
     <h1>ARTISTA</h1>
     <h2>{{art.nombre}}</h2>
     <p>{{art.lugar}}</p>
-    <img src={{art.imagenArtista}} width="300" height="300"><img/>
+    <img src={{art.imagenArtista}} onmouseover="this.width=500;this.height=500;" onmouseout="this.width=300;this.height=300;" width="300" height="300"/>
     <p>{{art.disco}}</p>
     <p>{{art.genero}}</p>
     {% endfor %}

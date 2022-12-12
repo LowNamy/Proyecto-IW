@@ -6,14 +6,14 @@
 
   #footer
 { width: 900px;
+  height: auto;
   font: normal 100% 'lucida sans unicode', arial, sans-serif;
-  height: 33px;
-  padding: 24px 0 5px 0;
-  text-align: center; 
   background: #14a928;
-  color: #FFF;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;}
+  text-align: center;
+}
+
+#footer .panel1 div{width:33%;float:left;border:none #ccc solid;}
+#footer .panel2{width:80%;margin:center;}
 
 #footer a
 { color: #FFF;
